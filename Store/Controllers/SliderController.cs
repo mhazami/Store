@@ -1,4 +1,6 @@
 ﻿using DataStracture;
+using Store.Models;
+using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
@@ -7,6 +9,7 @@ namespace Store.Controllers
 {
     public class SliderController : Controller
     {
+        private StoreContext db = new StoreContext();
         // GET: Slider
         public ActionResult Index()
         {
@@ -31,8 +34,13 @@ namespace Store.Controllers
                 file.Name = image.FileName;
                 file.ContentType = image.ContentType;
                 image.InputStream.Read(file.Content, 0, image.ContentLength);
-                slider.Image = file;
+                file.Id = Guid.NewGuid();
+                db.Files.Add(file);
+                slider.FileId = file.Id;
             }
+            slider.Id = Guid.NewGuid();
+            db.Sliders.Add(slider);
+            db.SaveChanges();
 
             return View();
         }

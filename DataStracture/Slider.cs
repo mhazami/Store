@@ -10,6 +10,6 @@ namespace DataStracture
 
         public string Description { get; set; }
 
-        public File Image { get; set; }
+        public Guid FileId { get; set; }
     }
 }
