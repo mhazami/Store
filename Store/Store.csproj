@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,7 +44,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +60,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -60,6 +70,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -88,12 +101,130 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Client\css\bootstrap-responsive.css" />
+    <Content Include="App_Themes\Client\css\bootstrap.css" />
+    <Content Include="App_Themes\Client\css\dlmenu.css" />
+    <Content Include="App_Themes\Client\css\elastic-slideshow.css" />
+    <Content Include="App_Themes\Client\css\font-awesome-rtl.css" />
+    <Content Include="App_Themes\Client\css\font-awesome.css" />
+    <Content Include="App_Themes\Client\css\fonts\icomoon.svg" />
+    <Content Include="App_Themes\Client\css\images\animated-overlay.gif" />
+    <Content Include="App_Themes\Client\css\jquery-ui.css" />
+    <Content Include="App_Themes\Client\css\jquery.formstyler.css" />
+    <Content Include="App_Themes\Client\css\jquery.modal.css" />
+    <Content Include="App_Themes\Client\css\megamenu.css" />
+    <Content Include="App_Themes\Client\css\multizoom.css" />
+    <Content Include="App_Themes\Client\css\responsive-options.css" />
+    <Content Include="App_Themes\Client\css\smartwizard.css" />
+    <Content Include="App_Themes\Client\css\style.css" />
+    <Content Include="App_Themes\Client\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="App_Themes\Client\img\bankwire.jpg" />
+    <Content Include="App_Themes\Client\img\banner.jpg" />
+    <Content Include="App_Themes\Client\img\banner2.jpg" />
+    <Content Include="App_Themes\Client\img\bg-categories-border-bottom.png" />
+    <Content Include="App_Themes\Client\img\bg-checkout-form-header-arrows.png" />
+    <Content Include="App_Themes\Client\img\bg-filter-price-range.png" />
+    <Content Include="App_Themes\Client\img\bg-main.jpg" />
+    <Content Include="App_Themes\Client\img\bg-product-info.png" />
+    <Content Include="App_Themes\Client\img\bg-shopping-cart.png" />
+    <Content Include="App_Themes\Client\img\bg-tile-1.jpg" />
+    <Content Include="App_Themes\Client\img\bg_direction_nav.png" />
+    <Content Include="App_Themes\Client\img\bg_direction_nav_active2.png" />
+    <Content Include="App_Themes\Client\img\cheque.jpg" />
+    <Content Include="App_Themes\Client\img\close.png" />
+    <Content Include="App_Themes\Client\img\elastic\large\1.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\large\2.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\large\3.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\large\4.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\large\5.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\large\6.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\large\7.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\thumbs\1.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\thumbs\2.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\thumbs\3.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\thumbs\4.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\thumbs\5.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\thumbs\6.jpg" />
+    <Content Include="App_Themes\Client\img\elastic\thumbs\7.jpg" />
+    <Content Include="App_Themes\Client\img\favicon.ico" />
+    <Content Include="App_Themes\Client\img\girl.jpg" />
+    <Content Include="App_Themes\Client\img\glyphicons-halflings-white.png" />
+    <Content Include="App_Themes\Client\img\glyphicons-halflings.png" />
+    <Content Include="App_Themes\Client\img\guy.jpg" />
+    <Content Include="App_Themes\Client\img\icon-clock.png" />
+    <Content Include="App_Themes\Client\img\icon-deal.png" />
+    <Content Include="App_Themes\Client\img\icon-new.png" />
+    <Content Include="App_Themes\Client\img\icon-sale.png" />
+    <Content Include="App_Themes\Client\img\icon-search.png" />
+    <Content Include="App_Themes\Client\img\logo.jpg" />
+    <Content Include="App_Themes\Client\img\payment-american-express.jpg" />
+    <Content Include="App_Themes\Client\img\payment-discover.jpg" />
+    <Content Include="App_Themes\Client\img\payment-maestro.jpg" />
+    <Content Include="App_Themes\Client\img\payment-paypal.jpg" />
+    <Content Include="App_Themes\Client\img\payment-visa.jpg" />
+    <Content Include="App_Themes\Client\img\popular2.jpg" />
+    <Content Include="App_Themes\Client\img\popular3.jpg" />
+    <Content Include="App_Themes\Client\img\products\1-2-thumb.jpg" />
+    <Content Include="App_Themes\Client\img\products\1-2.jpg" />
+    <Content Include="App_Themes\Client\img\products\1-3-thumb.jpg" />
+    <Content Include="App_Themes\Client\img\products\1-3.jpg" />
+    <Content Include="App_Themes\Client\img\products\1-thumb.jpg" />
+    <Content Include="App_Themes\Client\img\products\1.jpg" />
+    <Content Include="App_Themes\Client\img\products\2.jpg" />
+    <Content Include="App_Themes\Client\img\products\3.jpg" />
+    <Content Include="App_Themes\Client\img\products\4.jpg" />
+    <Content Include="App_Themes\Client\img\products\5.jpg" />
+    <Content Include="App_Themes\Client\img\sign-up-photos.png" />
+    <Content Include="App_Themes\Client\img\sign-up.png" />
+    <Content Include="App_Themes\Client\img\slider\slide11.jpg" />
+    <Content Include="App_Themes\Client\img\slider\slide22.jpg" />
+    <Content Include="App_Themes\Client\img\slider\slide33.jpg" />
+    <Content Include="App_Themes\Client\img\slider\slide44.jpg" />
+    <Content Include="App_Themes\Client\img\special-offer-vertical-4.jpg" />
+    <Content Include="App_Themes\Client\img\special-offer-vertical-5.jpg" />
+    <Content Include="App_Themes\Client\img\spinningred.gif" />
+    <Content Include="App_Themes\Client\img\watch.jpg" />
+    <Content Include="App_Themes\Client\js\bootstrap.min.js" />
+    <Content Include="App_Themes\Client\js\jquery.carouFredSel-6.2.1-packed.js" />
+    <Content Include="App_Themes\Client\js\jquery.dlmenu.js" />
+    <Content Include="App_Themes\Client\js\jquery.easing.js" />
+    <Content Include="App_Themes\Client\js\jquery.eislideshow.js" />
+    <Content Include="App_Themes\Client\js\jquery.formstyler.js" />
+    <Content Include="App_Themes\Client\js\jquery.jcountdown.js" />
+    <Content Include="App_Themes\Client\js\jquery.min.js" />
+    <Content Include="App_Themes\Client\js\jquery.modal.js" />
+    <Content Include="App_Themes\Client\js\jquery.multizoom.js" />
+    <Content Include="App_Themes\Client\js\jquery.nicescroll.js" />
+    <Content Include="App_Themes\Client\js\jquery.smartwizard.js" />
+    <Content Include="App_Themes\Client\js\jquery.ui.core.js" />
+    <Content Include="App_Themes\Client\js\jquery.ui.map.js" />
+    <Content Include="App_Themes\Client\js\jquery.ui.mouse.js" />
+    <Content Include="App_Themes\Client\js\jquery.ui.slider.js" />
+    <Content Include="App_Themes\Client\js\jquery.ui.tabs.js" />
+    <Content Include="App_Themes\Client\js\jquery.ui.widget.js" />
+    <Content Include="App_Themes\Client\js\modernizr.custom.js" />
+    <Content Include="App_Themes\Client\js\script.js" />
+    <Content Include="App_Themes\Store\css\bootstrap.css" />
+    <Content Include="App_Themes\Store\css\fontiran.css" />
+    <Content Include="App_Themes\Store\css\fontstyle.css" />
+    <Content Include="App_Themes\Store\img\3.jpg" />
+    <Content Include="App_Themes\Store\img\brand.gif" />
+    <Content Include="App_Themes\Store\img\client-1.jpg" />
+    <Content Include="App_Themes\Store\img\client-2.jpg" />
+    <Content Include="App_Themes\Store\img\client-3.jpg" />
+    <Content Include="App_Themes\Store\img\sidebar.jpg" />
+    <Content Include="App_Themes\Store\js\bootstrap.js" />
+    <Content Include="App_Themes\Store\js\jquery-3.3.1.min.js" />
+    <Content Include="App_Themes\Store\js\popper.js" />
+    <Content Include="App_Themes\Store\js\script.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,7 +232,57 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="App_Themes\Store\fonts\eot\IRANSansWeb.eot" />
+    <Content Include="App_Themes\Store\fonts\eot\IRANSansWeb_Bold.eot" />
+    <Content Include="App_Themes\Store\fonts\eot\IRANSansWeb_Light.eot" />
+    <Content Include="App_Themes\Store\fonts\eot\IRANSansWeb_Medium.eot" />
+    <Content Include="App_Themes\Store\fonts\eot\IRANSansWeb_UltraLight.eot" />
+    <Content Include="App_Themes\Store\fonts\ttf\IRANSansWeb.ttf" />
+    <Content Include="App_Themes\Store\fonts\ttf\IRANSansWeb_Bold.ttf" />
+    <Content Include="App_Themes\Store\fonts\ttf\IRANSansWeb_Light.ttf" />
+    <Content Include="App_Themes\Store\fonts\ttf\IRANSansWeb_Medium.ttf" />
+    <Content Include="App_Themes\Store\fonts\ttf\IRANSansWeb_UltraLight.ttf" />
+    <Content Include="App_Themes\Store\fonts\woff2\IRANSansWeb.woff2" />
+    <Content Include="App_Themes\Store\fonts\woff2\IRANSansWeb_Bold.woff2" />
+    <Content Include="App_Themes\Store\fonts\woff2\IRANSansWeb_Light.woff2" />
+    <Content Include="App_Themes\Store\fonts\woff2\IRANSansWeb_Medium.woff2" />
+    <Content Include="App_Themes\Store\fonts\woff2\IRANSansWeb_UltraLight.woff2" />
+    <Content Include="App_Themes\Store\fonts\woff\IRANSansWeb.woff" />
+    <Content Include="App_Themes\Store\fonts\woff\IRANSansWeb_Bold.woff" />
+    <Content Include="App_Themes\Store\fonts\woff\IRANSansWeb_Light.woff" />
+    <Content Include="App_Themes\Store\fonts\woff\IRANSansWeb_Medium.woff" />
+    <Content Include="App_Themes\Store\fonts\woff\IRANSansWeb_UltraLight.woff" />
+    <Content Include="App_Themes\Client\css\fonts\avant_garde_book_bt-webfont.eot" />
+    <Content Include="App_Themes\Client\css\fonts\avant_garde_book_bt-webfont.ttf" />
+    <Content Include="App_Themes\Client\css\fonts\avant_garde_book_bt-webfont.woff" />
+    <Content Include="App_Themes\Client\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="App_Themes\Client\css\fonts\fontawesome-webfont.eot%40" />
+    <Content Include="App_Themes\Client\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="App_Themes\Client\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="App_Themes\Client\css\fonts\icomoon.eot" />
+    <Content Include="App_Themes\Client\css\fonts\icomoon.eot%40" />
+    <Content Include="App_Themes\Client\css\fonts\icomoon.ttf" />
+    <Content Include="App_Themes\Client\css\fonts\icomoon.woff" />
+    <Content Include="App_Themes\Client\css\fonts\robotocondensed-regular.eot%40" />
+    <Content Include="App_Themes\Client\css\fonts\robotocondensed-regular.ttf" />
+    <Content Include="App_Themes\Client\css\fonts\robotocondensed-regular.woff" />
+    <Content Include="App_Themes\Client\fonts\bbc-nassim-regular.ttf" />
+    <Content Include="App_Themes\Client\fonts\BBCNassim.eot" />
+    <Content Include="App_Themes\Client\fonts\BBCNassim.ttf" />
+    <Content Include="App_Themes\Client\fonts\BBCNassim.woff" />
+    <Content Include="App_Themes\Client\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="App_Themes\Client\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="App_Themes\Client\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="App_Themes\Client\fonts\W_YEKAN_0.TTF" />
+    <Content Include="App_Themes\Client\fonts\yekan.eot" />
+    <Content Include="App_Themes\Client\fonts\yekan.ttf" />
+    <Content Include="App_Themes\Client\fonts\yekan.woff" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Slider\Create.cshtml" />
+    <Content Include="Views\Slider\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,7 +293,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataStracture\DataStracture.csproj">
+      <Project>{DF81DB95-0899-497C-986C-E42046270599}</Project>
+      <Name>DataStracture</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

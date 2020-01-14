@@ -1,0 +1,13 @@
+﻿@model Slider
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "Slider", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.TextBoxFor(model => model.Title, new { @class = "form-control", placeholder = "عنوان" })
+    @Html.TextAreaFor(model => model.Description, new { @class = "form-control", placeholder = "توضیحات" })
+   <input type="file" name="image" id="image" />
+   <input type="submit" value="ذخیره" />
+}
