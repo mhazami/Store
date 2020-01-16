@@ -10,6 +10,7 @@ namespace Store.Models
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Slider> Sliders { get; set; }
         public virtual DbSet<File> Files { get; set; }
+        public virtual DbSet<FooterSlider> FooterSliders { get; set; }
 
     }
 }
