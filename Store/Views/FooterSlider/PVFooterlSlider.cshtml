@@ -1,0 +1,15 @@
+﻿@model List<FooterSlider>
+
+<div class="partners list_carousel responsive">
+    <ul id="partner">
+       @{
+           foreach (var item in Model)
+           {
+               <li><img src="@Url.Action("ShowImage","File",new { id=@item.FileId})"></li>
+           }
+       }
+          
+    </ul>
+    <div class="clearfix">
+    </div>
+</div>

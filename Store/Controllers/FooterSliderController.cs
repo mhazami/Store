@@ -2,6 +2,7 @@
 using Store.Models;
 using System;
 using System.Collections.Generic;
+using System.EnterpriseServices.Internal;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -30,6 +31,7 @@ namespace Store.Controllers
             DataStracture.File file = new File();
             if (image != null)
             {
+                file.Id = Guid.NewGuid();
                 file.Content = new byte[image.ContentLength];
                 file.Size = image.ContentLength / 1024;
                 file.Name = image.FileName;
@@ -43,6 +45,12 @@ namespace Store.Controllers
             db.SaveChanges();
 
             return View();
+        }
+
+        public ActionResult PVFooterlSlider()
+        {
+            var list = db.FooterSliders.ToList().OrderBy(x => x.Order);
+            return PartialView(list.ToList());
         }
     }
 }

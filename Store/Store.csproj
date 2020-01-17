@@ -317,6 +317,8 @@
     <Content Include="Views\Slider\Index.cshtml" />
     <Content Include="Views\FooterSlider\Index.cshtml" />
     <Content Include="Views\FooterSlider\Create.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\FooterSlider\PVFooterlSlider.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
