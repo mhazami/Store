@@ -27,6 +27,7 @@ namespace Store.Controllers
         public ActionResult Create(Slider slider, HttpPostedFileBase image)
         {
             DataStracture.File file = new File();
+
             if (image != null)
             {
                 file.Content = new byte[image.ContentLength];

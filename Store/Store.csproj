@@ -214,6 +214,7 @@
     <Content Include="App_Themes\Store\css\bootstrap.css" />
     <Content Include="App_Themes\Store\css\fontiran.css" />
     <Content Include="App_Themes\Store\css\fontstyle.css" />
+    <Content Include="App_Themes\Store\css\Style.css" />
     <Content Include="App_Themes\Store\img\3.jpg" />
     <Content Include="App_Themes\Store\img\brand.gif" />
     <Content Include="App_Themes\Store\img\client-1.jpg" />

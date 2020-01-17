@@ -3,11 +3,24 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+<link href="~/App_Themes/Store/css/Style.css" rel="stylesheet" />
 
-@using (Html.BeginForm("Create", "Slider", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.TextBoxFor(model => model.Title, new { @class = "form-control", placeholder = "عنوان" })
-    @Html.TextAreaFor(model => model.Description, new { @class = "form-control", placeholder = "توضیحات" })
-   <input type="file" name="image" id="image" />
-   <input type="submit" value="ذخیره" />
-}
+<fieldset>
+    <legend>اسلایدر پایین</legend>
+    <div class="mm-slider">
+
+        @using (Html.BeginForm("Create", "Slider", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                @Html.TextBoxFor(model => model.Title, new { @class = "form-01", placeholder = "عنوان" })
+            </div>
+            <div>
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-01", placeholder = "توضیحات" })
+            </div>
+
+            <input class="btn-01" type="file" name="image" id="image" />
+            <input class="btn-01" type="submit" value="ذخیره" />
+        }
+    </div>
+
+</fieldset>

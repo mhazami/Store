@@ -1,0 +1,59 @@
+﻿.mm-slider {
+    margin: 50px auto;
+}
+
+
+
+.form-01 {
+    margin-bottom: 5px;
+    width: 110px;
+    height: 30px;
+}
+
+
+
+.btn-01 {
+    margin-bottom: 5px;
+    width: 90%;
+    height: 30px;
+}
+
+fieldset {
+    border: 1px solid gainsboro;
+    width: 60%;
+    margin: 0 auto;
+}
+
+legend {
+    display: block;
+    width: auto;
+    max-width: 120%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+    line-height: 20px;
+    color: gray;
+    white-space: normal;
+    text-align: right;
+}
+
+.data-form {
+    text-align: center;
+    padding: 0 10px;
+}
+
+    .data-form > div {
+        height: 35px;
+    }
+
+        .data-form > div > input {
+            width: 90%;
+            padding: 2%;
+            border: 1px solid gainsboro;
+            border-radius: 3px;
+        }
+
+input[type="file"] {
+    border: 1px solid gainsboro;
+    
+}
