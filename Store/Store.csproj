@@ -234,6 +234,7 @@
     <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\FooterSliderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SliderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -257,6 +258,10 @@
     <Compile Include="Migrations\202001161317428_update_fs.cs" />
     <Compile Include="Migrations\202001161317428_update_fs.designer.cs">
       <DependentUpon>202001161317428_update_fs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001211534561_product.cs" />
+    <Compile Include="Migrations\202001211534561_product.designer.cs">
+      <DependentUpon>202001211534561_product.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\StoreContext.cs" />
@@ -319,6 +324,7 @@
     <Content Include="Views\FooterSlider\Create.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\FooterSlider\PVFooterlSlider.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001161317428_update_fs.resx">
       <DependentUpon>202001161317428_update_fs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001211534561_product.resx">
+      <DependentUpon>202001211534561_product.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

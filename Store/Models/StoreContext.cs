@@ -12,5 +12,6 @@ namespace Store.Models
         public virtual DbSet<File> Files { get; set; }
         public virtual DbSet<FooterSlider> FooterSliders { get; set; }
 
+        public virtual DbSet<Product> Products { get; set; }
     }
 }
